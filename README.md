@@ -48,12 +48,13 @@ The goal of this task was to find the lowest hash value produced from a string i
  averaging the lowest hash value produced in 10 trials. A sample set of the results I obtained was:
  
     The avg lowest hash value produced in 10 sec was 0x154030b3bdde2c0000000000000000000000000000000000000000000000
-    The avg lowest hash value produced in 20 sec was 0xbbc9cc7af844880000000000000000000000000000000000000000000000
+    The avg lowest hash value produced in 20 sec was 0xbbc9cc7af84488000000000000000000000000000000000000000000000
     The avg lowest hash value produced in 30 sec was 0x66086c9964ec04000000000000000000000000000000000000000000000
 
-The lowest hash value did not decrease for longer intervals as it theoretically should have, so 
-it would be difficulty to determine a trend in lowest hash value versus amount of time in which 
-to perform hashes. However, considering that the maximum value of a 64-bit hexadecimal is 0xffff.
-...ffff, the average value would be around 0x8000...0000, so a single hash value has a 50% chance
- of being below this number. That means that, since more hashes can be performed in a longer time
-  interval, the lowest value a hash will produce will decrease as the time interval increases.
+The lowest hash value generally decreased for longer intervals as it theoretically should have, but 
+it was difficult to determine a trend in the relationship between the lowest hash value and 
+the amount of time in which to perform hashes. However, I noticed that the lowest hash value 
+decreased by an entire order of magnitude from the 10-second time interval to the 20-second time 
+interval. I predict that this decrease would continue as the time interval increased, but that 
+the increase would have to be much steeper in order to generate the same amount of change in the 
+lowest hash value.

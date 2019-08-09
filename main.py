@@ -155,7 +155,7 @@ def avg_lowest_hash(string: str, total_time: int):
     for i in range(10):
         hash_val_str = lowest_hash_value(strings_to_test, total_time)
         hash_val_hex = int(hash_val_str, base=16)
-        print("Trial", i, hex(hash_val_hex))
+        # print("Trial", i, hex(hash_val_hex))
         total_hash_val += hash_val_hex
 
     return '0x{:x}'.format(int(total_hash_val / 0x0a))

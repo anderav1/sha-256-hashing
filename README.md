@@ -45,8 +45,15 @@ It took almost 8 minutes to find a hash that matched my chosen 8-character seque
 ## Task 3
 The goal of this task was to find the lowest hash value produced from a string in a given amount of
  time--10, 20, and 30 seconds. For each time interval, the minimum value was calculated by 
- averaging the lowest hash value produced in 10 trials. Sample output looked like this:
+ averaging the lowest hash value produced in 10 trials. A sample set of the results I obtained was:
  
-    The lowest hash value produced in 10 sec was 0x12881f446da8510000000000000000000000000000000000000000000000
-    The lowest hash value produced in 20 sec was 0xb570b689aa9388000000000000000000000000000000000000000000000
-    The lowest hash value produced in 30 sec was 0x80dfda22bb6d48000000000000000000000000000000000000000000000
+    The avg lowest hash value produced in 10 sec was 0x154030b3bdde2c0000000000000000000000000000000000000000000000
+    The avg lowest hash value produced in 20 sec was 0xbbc9cc7af844880000000000000000000000000000000000000000000000
+    The avg lowest hash value produced in 30 sec was 0x66086c9964ec04000000000000000000000000000000000000000000000
+
+The lowest hash value did not decrease for longer intervals as it theoretically should have, so 
+it would be difficulty to determine a trend in lowest hash value versus amount of time in which 
+to perform hashes. However, considering that the maximum value of a 64-bit hexadecimal is 0xffff.
+...ffff, the average value would be around 0x8000...0000, so a single hash value has a 50% chance
+ of being below this number. That means that, since more hashes can be performed in a longer time
+  interval, the lowest value a hash will produce will decrease as the time interval increases.

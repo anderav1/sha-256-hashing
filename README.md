@@ -1,4 +1,4 @@
-# Project 3
+# Project 3: Working with SHA-256
 ## Task 1
 The first goal of this task was to determine, for files of various lengths, how many times the 
 files could be hashed within one second using SHA-256 and another hash function, which I chose to
@@ -40,3 +40,13 @@ so on up to 11221996. These were the times I recorded for each prefix size:
 - Found first 8 digits in 457.21379828453064 sec (11221996...)
 
 It took almost 8 minutes to find a hash that matched my chosen 8-character sequence.
+
+---
+## Task 3
+The goal of this task was to find the lowest hash value produced from a string in a given amount of
+ time--10, 20, and 30 seconds. For each time interval, the minimum value was calculated by 
+ averaging the lowest hash value produced in 10 trials. Sample output looked like this:
+ 
+    The lowest hash value produced in 10 sec was 0x12881f446da8510000000000000000000000000000000000000000000000
+    The lowest hash value produced in 20 sec was 0xb570b689aa9388000000000000000000000000000000000000000000000
+    The lowest hash value produced in 30 sec was 0x80dfda22bb6d48000000000000000000000000000000000000000000000

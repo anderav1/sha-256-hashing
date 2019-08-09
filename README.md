@@ -21,6 +21,7 @@ The second goal of this task was to determine how long it would take to find a c
 particular hash value by brute-forcing both hash algorithms. So far it has been over two hours 
 and I still haven't gotten a result for the first algorithm. For context, I am operating on a 
 laptop with 4.00 GB of RAM and a 1.70 GHz CPU.
+
 ---
 ## Task 2
 The goal of this task was to determine how long it would take to generate a hash whose prefix 
